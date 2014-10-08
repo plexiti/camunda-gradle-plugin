@@ -1,0 +1,21 @@
+target
+*.iml
+*.ipr
+*.iws
+.idea
+# eclipse
+.classpath
+.project
+.settings
+.checkstyle
+# OSX
+.DS_Store
+# More
+/build
+/classes
+/idea
+/.java-version
+/out
+/gradlew*
+/gradle
+/.gradle

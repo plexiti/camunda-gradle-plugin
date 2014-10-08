@@ -1,0 +1,18 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+group = 'com.plexiti.camunda'
+version = '0.1.0-SNAPSHOT'
+sourceCompatibility = 1.6
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7'
+    compile 'org.apache.httpcomponents:httpmime:4.3.5'
+}

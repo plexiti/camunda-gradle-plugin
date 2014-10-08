@@ -1,4 +1,5 @@
-import com.plexiti.camunda.gradle.CreateDeploymentTask
+package com.plexiti.camunda.gradle
+
 import org.gradle.api.Project
 import org.gradle.testfixtures.ProjectBuilder
 import spock.lang.Specification

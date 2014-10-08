@@ -15,4 +15,10 @@ dependencies {
     compile localGroovy()
     compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7'
     compile 'org.apache.httpcomponents:httpmime:4.3.5'
+    testCompile "org.spockframework:spock-core:0.7-groovy-1.8"
+    testCompile 'org.camunda.bpm.extension:camunda-bpm-assert:1.1'
+    testCompile 'org.camunda.bpm:camunda-engine:7.2.0-alpha5'
+    testRuntime 'org.camunda.bpm:camunda-engine-spring:7.2.0-alpha5'
+    testRuntime "cglib:cglib-nodep:3.1"
+    testRuntime 'com.h2database:h2:1.3.168'
 }

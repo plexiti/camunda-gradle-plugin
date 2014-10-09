@@ -1,9 +1,7 @@
 package com.plexiti.camunda.gradle
 
-import com.plexiti.camunda.rest.Deployment
 import com.plexiti.camunda.rest.Login
 import com.plexiti.camunda.rest.ProcessDefinition
-import groovy.io.FileType
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 
@@ -13,6 +11,7 @@ import org.gradle.api.tasks.TaskAction
 class StartProcessInstanceTask extends DefaultTask {
 
     String processDefinitionKey
+    Map<String, Object> variables
 
     @TaskAction
     def startProcessInstance() {
@@ -22,7 +21,8 @@ class StartProcessInstanceTask extends DefaultTask {
                 project.property('camunda.username') as String,
                 project.property('camunda.password') as String
             ),
-            processDefinitionKey
+            processDefinitionKey,
+            variables ?: [:]
         )
     }
 

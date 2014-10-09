@@ -10,8 +10,6 @@ import groovyx.net.http.Method
  */
 class Deployment {
     
-    static def CREATE = '/engine/engine/default/deployment/create'
-    
     /**
      * curl --trace-ascii "$TRACE" -w "\n" --cookie cookie.txt \
      * -H "Accept: application/json" \
@@ -39,7 +37,8 @@ class Deployment {
                 org.apache.http.entity.ContentType.APPLICATION_OCTET_STREAM, it.key)
         }
         login.httpBuilder().request(Method.POST, ContentType.JSON) { request ->
-            uri.path = "$login.api$CREATE"
+            uri.path = "${login.api}/engine/engine/${login.engineName}/deployment/create"
+            println(uri.path)
             requestContentType = "multipart/form-data"
             request.setEntity(builder.build())
             response.success = onSuccess

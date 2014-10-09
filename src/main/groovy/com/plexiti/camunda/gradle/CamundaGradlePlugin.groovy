@@ -6,7 +6,6 @@ import org.gradle.api.Project
 /**
  * @author Martin Schimak <martin.schimak@plexiti.com>
  */
-
 class CamundaGradlePlugin implements Plugin<Project> {
 
     void apply(Project project) {
@@ -14,6 +13,7 @@ class CamundaGradlePlugin implements Plugin<Project> {
         project.tasks.create('camunda-deploy-resources', CreateDeploymentTask) {
             resources = new File("$project.rootDir/src/main/resources")
         }
+        project.tasks.create('camunda-start-process-instance', StartProcessInstanceTask)
     }
 
 }

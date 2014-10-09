@@ -11,12 +11,11 @@ import groovyx.net.http.Method
  */
 class Login {
 
-    static def LOGIN = '/admin/auth/user/default/login/cockpit'
-
     String api
     String cookie = ''
     String username
     String password
+    String engineName
 
     HTTPBuilder httpBuilder() {
         def http = new HTTPBuilder(api)
@@ -37,12 +36,13 @@ class Login {
             String api,
             String username,
             String password,
+            String engineName = Default.engineName,
             Closure onSuccess = Default.onSuccess,
             Closure onFailure = Default.onFailure
     ) {
-        def login = new Login(api: api, username: username, password: password)
+        def login = new Login(api: api, username: username, password: password, engineName: engineName)
         login.httpBuilder().request(Method.POST, ContentType.JSON) {
-            uri.path = "$api$LOGIN"
+            uri.path = "$api/admin/auth/user/default/login/cockpit"
             requestContentType = ContentType.URLENC
             body = [username: username, password: password]
             response.success = { HttpResponse response, content ->

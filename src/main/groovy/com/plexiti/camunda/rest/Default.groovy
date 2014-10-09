@@ -9,6 +9,8 @@ import org.apache.http.Header
  */
 class Default {
 
+    static def engineName = "default"
+
     static def onSuccess = { HttpResponseDecorator response, Object content ->
         println("> HTTP request succeeded with $response.statusLine")
         println("> HTTP response body: $content")

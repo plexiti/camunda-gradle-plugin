@@ -1,10 +1,10 @@
-package com.plexiti.camunda.rest
+package org.camunda.bpm.extension.gradle.rest
 
 import groovyx.net.http.ContentType
 import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.Method
 import org.apache.http.Header
 import org.apache.http.HttpResponse
-import groovyx.net.http.Method
 
 /**
  * @author Martin Schimak <martin.schimak@plexiti.com>

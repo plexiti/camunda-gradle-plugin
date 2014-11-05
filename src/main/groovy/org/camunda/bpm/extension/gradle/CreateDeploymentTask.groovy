@@ -1,8 +1,8 @@
-package com.plexiti.camunda.gradle
+package org.camunda.bpm.extension.gradle
 
-import com.plexiti.camunda.rest.Deployment
-import com.plexiti.camunda.rest.Login
 import groovy.io.FileType
+import org.camunda.bpm.extension.gradle.rest.Deployment
+import org.camunda.bpm.extension.gradle.rest.Login
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 

@@ -1,9 +1,8 @@
-package com.plexiti.camunda.rest
+package org.camunda.bpm.extension.gradle.rest
 
 import groovyx.net.http.ContentType
-import org.apache.http.entity.mime.MultipartEntityBuilder
-
 import groovyx.net.http.Method
+import org.apache.http.entity.mime.MultipartEntityBuilder
 
 /**
  * @author Martin Schimak <martin.schimak@plexiti.com>

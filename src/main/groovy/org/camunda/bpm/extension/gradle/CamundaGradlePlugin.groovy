@@ -1,4 +1,4 @@
-package com.plexiti.camunda.gradle
+package org.camunda.bpm.extension.gradle
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -9,11 +9,10 @@ import org.gradle.api.Project
 class CamundaGradlePlugin implements Plugin<Project> {
 
     void apply(Project project) {
-        project.tasks.create('camunda-deploy', CreateDeploymentTask)
-        project.tasks.create('camunda-deploy-resources', CreateDeploymentTask) {
+        project.tasks.create('deployResources', CreateDeploymentTask) {
             resources = new File("$project.rootDir/src/main/resources")
         }
-        project.tasks.create('camunda-start-process-instance', StartProcessInstanceTask)
+        project.tasks.create('startProcessInstance', StartProcessInstanceTask)
     }
 
 }

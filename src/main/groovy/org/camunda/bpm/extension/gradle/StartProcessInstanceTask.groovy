@@ -1,7 +1,7 @@
-package com.plexiti.camunda.gradle
+package org.camunda.bpm.extension.gradle
 
-import com.plexiti.camunda.rest.Login
-import com.plexiti.camunda.rest.ProcessDefinition
+import org.camunda.bpm.extension.gradle.rest.Login
+import org.camunda.bpm.extension.gradle.rest.ProcessDefinition
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 

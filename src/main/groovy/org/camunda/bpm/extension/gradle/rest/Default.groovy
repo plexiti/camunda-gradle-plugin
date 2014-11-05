@@ -1,4 +1,4 @@
-package com.plexiti.camunda.rest
+package org.camunda.bpm.extension.gradle.rest
 
 import groovyx.net.http.HttpResponseDecorator
 import groovyx.net.http.HttpResponseException

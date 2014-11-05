@@ -10,7 +10,7 @@ import org.gradle.api.tasks.TaskAction
  */
 class StartProcessInstanceTask extends DefaultTask {
 
-    String processDefinitionKey
+    String key
     Map<String, Object> variables
 
     @TaskAction
@@ -21,7 +21,7 @@ class StartProcessInstanceTask extends DefaultTask {
                 project.property('camunda.username') as String,
                 project.property('camunda.password') as String
             ),
-            processDefinitionKey,
+            key,
             variables ?: [:]
         )
     }

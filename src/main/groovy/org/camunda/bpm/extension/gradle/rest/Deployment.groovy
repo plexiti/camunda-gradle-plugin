@@ -22,6 +22,7 @@ class Deployment {
     static void create(
             Login login, 
             Map<String, File> resources,
+            boolean enableDuplicateFiltering = true,
             boolean deployChangedOnly = false,
             String deploymentName = "RestClientDeployment",
             Closure onSuccess = Default.onSuccess, 
@@ -29,7 +30,7 @@ class Deployment {
     ) {
         def builder = MultipartEntityBuilder.create()
         builder.addTextBody('deployment-name', deploymentName)
-        builder.addTextBody('deploy-changed-only', deployChangedOnly as String)
+        builder.addTextBody('deploy-changed-only', enableDuplicateFiltering as String)
         builder.addTextBody('enable-duplicate-filtering', deployChangedOnly as String)
         def i = 1; resources.each {
             builder.addBinaryBody("deployment-resource-${i++}", it.value, 

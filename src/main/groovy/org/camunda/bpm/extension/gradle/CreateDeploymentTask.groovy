@@ -25,8 +25,7 @@ class CreateDeploymentTask extends DefaultTask {
                 project.property('camunda.username') as String,
                 project.property('camunda.password') as String
             ),
-            deployment,
-            true
+            deployment
         )
     }
 
